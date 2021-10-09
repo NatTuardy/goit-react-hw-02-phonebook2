@@ -13,5 +13,5 @@ const InputField = (props) => {
 export default InputField;
 
 InputField.propTypes = {
-    props: PropTypes.object.isRequired,
+    props: PropTypes.object,
   }

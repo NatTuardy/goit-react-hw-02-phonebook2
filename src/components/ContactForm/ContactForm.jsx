@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { generate } from "shortid";
-import InputField from "../InputField/InputField";
+import InputField from "../inputField/InputField";
 import {list} from "../../fields/fields"
 
 class ContactForm extends Component {

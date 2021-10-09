@@ -2,11 +2,9 @@ import PropTypes from 'prop-types'
 
 const ContactItem = ({ data, onDelete }) => {
   const contactsList = data.map(({ name, id, number }) => (
-    <>
-      <div className="d-grid gap-2 d-md-flex justify-content-center">
         <li
           key={id}
-          className="list-group-item d-flex justify-content-between align-items-start col-md-6"
+          className="list-group-item d-flex justify-content-between align-items-start "
         >
           {name}: {number}
           <button
@@ -17,8 +15,6 @@ const ContactItem = ({ data, onDelete }) => {
             Delete
           </button>
         </li>
-      </div>
-    </>
   ));
   return <>{contactsList}</>;
 };
@@ -26,6 +22,12 @@ const ContactItem = ({ data, onDelete }) => {
 export default ContactItem;
 
 ContactItem.propTypes = {
-  data: PropTypes.array,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      id: PropTypes.string,
+      number: PropTypes.string,
+    })
+  ),
   onDelete: PropTypes.func.isRequired,
 }

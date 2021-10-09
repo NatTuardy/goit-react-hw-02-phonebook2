@@ -5,7 +5,7 @@ const ContactList = ({ data, onDelete }) => {
   return (
     <>
       <h1>Contacts</h1>
-      <ul className="list-group">
+      <ul className="list-group d-grid gap-2 d-md-flex justify-content-center">
         <ContactItem data={data} onDelete={onDelete} />
       </ul>
     </>

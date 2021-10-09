@@ -1,8 +1,8 @@
 import { Component } from "react";
 import "./App.css";
-import ContactForm from "./components/ContactForm/ContactForm";
-import ContactList from "./components/ContactList/ContactList";
-import Filter from "./components/Filter/Filter";
+import ContactForm from "./components/contactForm/ContactForm";
+import ContactList from "./components/contactList/ContactList";
+import Filter from "./components/filter/Filter";
 
 class App extends Component {
   state = {
@@ -17,8 +17,8 @@ class App extends Component {
 
   handleFilter = () => {
     const { filter, contacts } = this.state;
-    const newContactsList = contacts.map((item) => ({ ...item }));
-    const filteredContacts = newContactsList.filter((item) =>
+    // const newContactsList = contacts.map((item) => ({ ...item }));
+    const filteredContacts = contacts.filter((item) =>
       item.name.toLowerCase().includes(filter.toLowerCase())
     );
     return filteredContacts;
